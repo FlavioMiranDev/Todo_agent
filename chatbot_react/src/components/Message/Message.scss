@@ -1,0 +1,99 @@
+.message {
+  display: flex;
+  gap: 1rem;
+  max-width: 80%;
+
+  &.user {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+  }
+}
+
+.message-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+
+  .message.user & {
+    background-color: var(--user-message-bg);
+  }
+
+  .message.bot & {
+    background-color: var(--bot-message-bg);
+  }
+}
+
+.message-content {
+  background-color: var(--card-bg);
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  line-height: 1.6;
+
+  .message.user & {
+    background-color: var(--user-message-bg);
+    border-bottom-right-radius: 4px;
+  }
+
+  .message.bot & {
+    border-bottom-left-radius: 4px;
+  }
+}
+
+.message-text {
+  margin: 1rem;
+  white-space: pre-wrap;
+
+  ul,
+  li,
+  p,
+  h4,
+  code {
+    text-wrap: wrap;
+  }
+}
+
+.message-time {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+  text-align: right;
+}
+
+.typing-indicator {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.5rem 0;
+}
+
+.typing-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--text-secondary);
+  border-radius: 50%;
+  animation: typing 1.4s infinite ease-in-out;
+
+  &:nth-child(1) {
+    animation-delay: -0.32s;
+  }
+  &:nth-child(2) {
+    animation-delay: -0.16s;
+  }
+}
+
+@keyframes typing {
+  0%,
+  80%,
+  100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

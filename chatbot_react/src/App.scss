@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #2563eb;
+  --primary-dark: #1d4ed8;
+  --bg-color: #0f172a;
+  --sidebar-bg: #1e293b;
+  --card-bg: #334155;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --border-color: #475569;
+  --user-message-bg: #3b82f6;
+  --bot-message-bg: #475569;
+  --success-color: #10b981;
+  --danger-color: #ff5d5d;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.App {
+  height: 100vh;
+}
