@@ -4,7 +4,6 @@ from sqlalchemy import Column, Integer, Text, DateTime
 from sqlalchemy.types import UUID
 from pgvector.sqlalchemy import Vector
 from app.core.database import Base
-from sqlalchemy.sql import func
 
 
 class DocumentChunk(Base):
@@ -15,5 +14,5 @@ class DocumentChunk(Base):
     page = Column(Integer, nullable=True)
     chunk_index = Column(Integer, nullable=True)
     content = Column(Text, nullable=False)
-    embedding = Column(Vector(1536), nullable=False)
-    created_at = Column(DateTime, default=datetime.now())
+    embedding = Column(Vector(768), nullable=False)
+    created_at = Column(DateTime, default=datetime.now)

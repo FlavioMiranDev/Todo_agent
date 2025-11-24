@@ -1,0 +1,32 @@
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &--primary {
+    background: var(--primary);
+    color: white;
+
+    &:hover:not(:disabled) {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+  }
+
+  &--success {
+    background: var(--accent);
+    color: white;
+
+    &:hover:not(:disabled) {
+      background: #0a7c6d;
+      transform: scale(1.1);
+    }
+  }
+}

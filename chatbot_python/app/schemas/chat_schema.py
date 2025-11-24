@@ -12,15 +12,17 @@ class ChatMessage(BaseModel):
 
 class ChatRequest(BaseModel):
     message: str
-    conversation_id: Optional[str] = None
+    conversation_id: Optional[UUID] = None
 
 
 class ChatResponse(BaseModel):
     response: str
-    message_id: UUID
+    id: UUID
+    conversation_id: UUID
+    role: Optional[str] = None
 
 
 class Conversation(BaseModel):
-    id: str
-    messages: List[ChatMessage]
+    id: UUID
+    name: str
     createdAt: datetime

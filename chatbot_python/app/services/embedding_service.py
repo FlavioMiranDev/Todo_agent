@@ -5,7 +5,7 @@ import os
 class EmbeddingService:
     def __init__(self):
         self.embedder = GoogleGenerativeAIEmbeddings(
-            model="models/embedding-004",
+            model="models/text-embedding-004",
             google_api_key=os.getenv("GEMINI_API_KEY")
         )
 
